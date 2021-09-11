@@ -4,7 +4,7 @@ from discord.ext.commands.core import command
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
+load_dotenv('.env')
 from bs4 import BeautifulSoup as soup
 from urllib.request import urlopen as req
 
@@ -249,4 +249,4 @@ async def on_message(message):
 
 
 # Run client on server
-client.run('ODYyNzM0NDI5Nzc1NDYyNDUy.YOcqDA.3LSxBBTkaTClpKA8-n4qqgbhwMU')
+client.run(os.getenv('BOT_TOKEN'))
